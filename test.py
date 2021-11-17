@@ -29,9 +29,11 @@ prediction=model.predict(xtest)
 
 
 accuracy=model.score(xtest,ytest)
+
 categories=['Male','Female']
 print('Accuracy==>',accuracy)
 print('Prediction is :',categories[prediction[0]])
 mypet=xtest[0].reshape(50,50)
 plt.imshow(mypet,cmap='gray')
 plt.show()
+

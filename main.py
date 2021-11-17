@@ -8,11 +8,11 @@ model = SVMPrediction.load('gender_detection.model')
 
 
     
-classes = ['man','woman']
+classes = ['man','woman',"dog"]
 
 while True:
 
-    frame = cv2.imread(r'4.PNG')
+    frame = cv2.imread(r'qqq.PNG')
     face, _ = cv.detect_face(frame)
     for idx, f in enumerate(face):
 

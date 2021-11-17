@@ -6,16 +6,16 @@ import pickle
 
 dir='D:\\web\\Images'
 data=[]
-categories=['male','female']
-for category in categories:
-    path=os.path.join(dir,category)
-    label=categories.index(category)
+genders=['male','female']
+for gender in genders:
+    path=os.path.join(dir,gender)
+    label=genders.index(gender)
     for img in os.listdir(path):
         imgpath=os.path.join(path,img)
-        pet_img=cv2.imread(imgpath,0)
+        imagesGender=cv2.imread(imgpath,0)
         try:
-            pet_img=cv2.resize(pet_img,(50,50))
-            image=np.array(pet_img).flatten()
+            imagesGender=cv2.resize(imagesGender,(50,50))
+            image=np.array(imagesGender).flatten()
             data.append([image,label])
         except Exception as e:
             pass

@@ -18,10 +18,10 @@ labels=[]
 for feature,label in data:
     features.append(feature)
     labels.append(label)
-xtrain,xtest,ytrain,ytest=train_test_split(features,labels,test_size=0.98)
+xtrain,xtest,ytrain,ytest=train_test_split(features,labels,test_size=0.25)
 
 
-model=SVC(C=1,kernel='poly',gamma='auto')
+model=SVC(C=1.0022132991,kernel='poly',gamma='auto')
 model.fit(xtrain,ytrain)
 pick=open('gender.model','wb')
 pickle.dump(model,pick)
